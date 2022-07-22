@@ -1,4 +1,3 @@
-# ASC UNIT TEST
 
 ## Resources
 
@@ -29,9 +28,3 @@ $$
     {"a1": 1_000_000,"a2":1_000_000}
   ]
 $$
-
-## Utils 
-`const utils = require(locationDir)` - Import util class as `utils`
-`utils.randomIntRange(minNum, maxNum)` - Returns a number between minNum and maxNum.
-`utils.randomSentence(len)` - Returns a random sentence based on the static variable `alphabet`.
-`utils.randomSentenceSpace(len)` - Returns a random sentence based on the static variable `spaceAlphabet`.
