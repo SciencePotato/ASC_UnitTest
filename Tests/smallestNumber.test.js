@@ -37,8 +37,8 @@ describe('Sum Some Nums', () => {
 
 
   it('<b>TEST #1</b><br> sumTwo should be defined as a function', () => {
-    expect(smallestNum).to.exist;
-    expect(smallestNum).to.be.a('function');
+    expect(testFunction.smallestNum).to.exist;
+    expect(testFunction.smallestNum).to.be.a('function');
   });
 
 
