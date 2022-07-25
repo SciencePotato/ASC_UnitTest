@@ -68,7 +68,7 @@ console.log(output - input);
 
 #endregion */
 
-/*#region largestDigit
+/*#region largestSingleDigit
 let randNum = utils.randIntRange(1, 10000);
 let largestDigit = 0;
 console.log(randNum);
@@ -82,3 +82,36 @@ while (randNum > 0) {
 
 console.log(largestDigit);
 #endregion */
+
+
+/*#region isPalindrome
+let word = "Evil Olive";
+let isPalindrome = true;
+word = word.replaceAll(" ", '');
+for (let i = 0; i < (word.length / 2); i ++) {
+    if (isPalindrome == false)
+        break;
+    if (!(word.charAt(i).toUpperCase() == word.charAt(word.length - i - 1).toUpperCase()))
+        isPalindrome = false;
+}
+console.log(isPalindrome);
+
+#endregion*/
+
+/*#region isPalindromeNum
+let num = utils.randIntRange(1,10000000);
+num = num.toString();
+let isPalindrome = true;
+for (let i = 0; i < (num.length / 2); i++) {
+    if (isPalindrome == false)
+        break;
+    if (!(num.charAt(i) == num.charAt(num.length - i - 1)))
+        isPalindrome = false;
+}
+
+console.log(isPalindrome);
+#endregion */
+
+//#region Sorting Array
+
+//#endregion

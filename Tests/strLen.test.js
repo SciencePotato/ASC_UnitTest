@@ -30,26 +30,26 @@ for (let i = 0; i < 5; i++) {
 }
 const allR2Matched = r2a.every((result) => result === true);
 
-describe('Sum Some Nums', () => {
+describe('String Length', () => {
 
 
-  it('<b>TEST #1</b><br> sumTwo should be defined as a function', () => {
+  it('<b>TEST #1</b><br> strLen should be defined as a function', () => {
     expect(testFunction.strLen).to.exist;
     expect(testFunction.strLen).to.be.a('function');
   });
 
 
-  it('<b>TEST #2</b><br> testing sumTwo 5 times with random numbers', () => {
+  it('<b>TEST #2</b><br> testing strLen 5 times with random combination of words', () => {
     expect(allR1Matched).to.be.true;
   });
 
 
-  it('<b>TEST #3</b><br> testing sumTwo 5 times with random negative numbers', () => {
+  it('<b>TEST #3</b><br> testing strLen 5 more times with random combination of words', () => {
     expect(allR2Matched).to.be.true;
   });
 
 
-  it('<b>TEST #4</b><br> should work with numbers like 1 million!$$[{"a1": " potato "},{"a1": "tomato"}]$$', () => {
+  it('<b>TEST #4</b><br> should work with words with English words!$$[{"a1": " potato "},{"a1": "tomato"}]$$', () => {
     expect(testFunction.strLen(' potato ')).to.equal(6);
     expect(testFunction.strLen('tomato')).to.equal(6);
   });

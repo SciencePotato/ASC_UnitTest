@@ -34,6 +34,18 @@ function isPalindromeNum(num) {
     return false;
 }
 
+function sortArray(arr) {
+    return newArr;
+}
+
+function correctTypo(str) {
+    return newStr;
+}
+
+function numToBinary(num) {
+    return binary;
+}
+
 module.exports = {  sumTwo, 
                     smallestNum,
                     strLen, 
@@ -42,5 +54,8 @@ module.exports = {  sumTwo,
                     funnyMath, 
                     isPalindrome, 
                     isPalindromeNum, 
-                    largestSingleDigit
+                    largestSingleDigit, 
+                    sortArray,
+                    correctTypo,
+                    numToBinary
                 };
