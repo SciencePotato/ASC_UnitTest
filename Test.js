@@ -115,3 +115,11 @@ console.log(isPalindrome);
 //#region Sorting Array
 
 //#endregion
+
+//#region correctTypo
+
+//#endregion
+
+//#region numberToBinary
+
+//#endregion

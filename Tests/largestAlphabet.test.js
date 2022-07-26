@@ -3,9 +3,6 @@ const testFunction = require('../main.js')
 const chai = require('chai');
 const expect = chai.expect;
 
-const randIntRange = (min, max) =>
-    Math.floor(Math.random() * (max - min + 1)) + min;
-
 let r1a = [];
 for (let i = 0; i < 5; i++) {
     let range = utils.randIntRange(1, 10);
@@ -15,7 +12,7 @@ for (let i = 0; i < 5; i++) {
         if (randSent.charAt(i) > largestChar) 
             largestChar = randSent.charAt(i);
     }
-    let userAns =  testFunction.largestAlphabet();
+    let userAns =  testFunction.largestAlphabet(randSent);
     r1a.push(largestChar === userAns);
 }
 const allR1Matched = r1a.every((result) => result === true);
@@ -29,7 +26,7 @@ for (let i = 0; i < 5; i++) {
         if (randSent.charAt(i) > largestChar) 
             largestChar = randSent.charAt(i);
     }
-    let userAns =  testFunction.largestAlphabet();
+    let userAns =  testFunction.largestAlphabet(randSent);
     r2a.push(largestChar === userAns);
 }
 const allR2Matched = r2a.every((result) => result === true);

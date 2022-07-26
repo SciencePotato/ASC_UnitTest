@@ -14,7 +14,7 @@ function largestAlphabet(str) {
     return 'a';
 }
 
-function multiplyArray(str) {
+function multiplyArray(arr1, arr2) {
     return [1, 2];
 }
 
@@ -26,7 +26,7 @@ function isPalindrome(str) {
     return false;
 }
 
-function funnyMath(str) {
+function funnyMath(inp, target) {
     return 9;
 }
 
