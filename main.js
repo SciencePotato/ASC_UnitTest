@@ -46,6 +46,10 @@ function numToBinary(num) {
     return binary;
 }
 
+function fizzBuzz(num) {
+    return "FizzBuzz";
+}
+
 module.exports = {  sumTwo, 
                     smallestNum,
                     strLen, 
@@ -57,5 +61,6 @@ module.exports = {  sumTwo,
                     largestSingleDigit, 
                     sortArray,
                     correctTypo,
-                    numToBinary
+                    numToBinary,
+                    fizzBuzz
                 };

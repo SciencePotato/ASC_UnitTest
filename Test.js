@@ -96,7 +96,31 @@ for (let i = 0; i < (word.length / 2); i ++) {
 }
 console.log(isPalindrome);
 
-#endregion*/
+let wordLength = utils.randIntRange(1, 10);
+let wordCharacter = [];
+let word = ""
+for (let i = 0; i < wordLength; i ++) {
+    let char = utils.onlyAlphabet.charAt(utils.randIntRange(1, utils.onlyAlphabet.length));
+    wordCharacter.push(char);
+}
+
+for (let i = 0; i < wordCharacter.length; i ++) {
+    word += wordCharacter[i];
+}
+
+for (let i = wordCharacter.length - 1; i >= 0; i --) {
+    word += wordCharacter[i];
+}
+
+let isPalindrome = true;
+word = word.replaceAll(" ", '');
+for (let i = 0; i < (word.length / 2); i ++) {
+    if (isPalindrome == false)
+        break;
+    if (!(word.charAt(i).toUpperCase() == word.charAt(word.length - i - 1).toUpperCase()))
+        isPalindrome = false;
+}
+#endregion */
 
 /*#region isPalindromeNum
 let num = utils.randIntRange(1,10000000);
@@ -110,13 +134,46 @@ for (let i = 0; i < (num.length / 2); i++) {
 }
 
 console.log(isPalindrome);
-#endregion */
 
-//#region Sorting Array
+let num = utils.randIntRange(1,10000000);
+num = num.toString();
+reverseNum = '';
+for (let i = num.length - 1; i >= 0; i --) {
+    reverseNum += num.charAt(i);
+}
 
-//#endregion
+num += reverseNum;
+
+let isPalindrome = true;
+for (let i = 0; i < (num.length / 2); i++) {
+    if (isPalindrome == false)
+        break;
+    if (!(num.charAt(i) == num.charAt(num.length - i - 1)))
+        isPalindrome = false;
+}
+#endregion */ 
+
+/*#region Sorting Array
+let randNum = utils.randIntRange(1, 100);
+let arr = [];
+for (let i = 0; i < randNum; i++) {
+    arr.push(utils.randIntRange(-500,500))
+}
+arr.sort((a, b) => a - b)
+console.log(arr);
+
+#endregion*/
 
 //#region correctTypo
+let wordLength = utils.randIntRange(1, 5000);
+let word = utils.randSentence(wordLength); 
+word = word.replaceAll(" ", "");
+word = word.replaceAll("0", "o");
+word = word.replaceAll("!", "1");
+word = word.replaceAll(".", "");
+word = word.replaceAll("?", "");
+word = word.replaceAll(",", "");
+console.log(word);
 
 //#endregion
 
