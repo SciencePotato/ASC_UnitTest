@@ -164,7 +164,7 @@ console.log(arr);
 
 #endregion*/
 
-//#region correctTypo
+/*#region correctTypo
 let wordLength = utils.randIntRange(1, 5000);
 let word = utils.randSentence(wordLength); 
 word = word.replaceAll(" ", "");
@@ -175,8 +175,24 @@ word = word.replaceAll("?", "");
 word = word.replaceAll(",", "");
 console.log(word);
 
-//#endregion
+#endregion */
 
-//#region numberToBinary
+/*#region numberToBinary
+let randNum = utils.randIntRange(0, 10000);
+let binary = (randNum >>> 0).toString(2);
+let binaryNum = parseInt(binary);
+console.log(binaryNum);
+#endregion*/
 
-//#endregion
+/*#region fizzBuzz
+let randNum = utils.randIntRange(1, 10000);
+let ans = '';
+if (randNum % 3 == 0 && randNum % 5 == 0) 
+    ans = "FizzBuzz";
+else if (randNum % 3 == 0)
+    ans = "Fizz"
+else if (randNum % 5 == 0)
+    ans = "Buzz"
+else
+    ans = randNum.toString();
+#endregion */
