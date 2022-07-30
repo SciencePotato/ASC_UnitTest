@@ -6,15 +6,23 @@ const expect = chai.expect;
 
 let r1a = [];
 for (let i = 0; i < 5; i++) {
-    let userAns =  testFunction.correctTypo();
-    r1a.push(sentLen === userAns);
+    let wordLength = utils.randIntRange(1, 5000);
+    let word = utils.specialSentence(wordLength); 
+    let userAns =  testFunction.correctTypo(word);
+    word = word.replaceAll("1", "I");
+    word = word.replaceAll("0", "O");
+    r1a.push(word === userAns);
 }
 const allR1Matched = r1a.every((result) => result === true);
 
 let r2a = [];
 for (let i = 0; i < 5; i++) {
-    let userAns =  testFunction.correctTypo();
-    r2a.push(sentLen === userAns);
+    let wordLength = utils.randIntRange(1, 5000);
+    let word = utils.specialSentence(wordLength); 
+    let userAns =  testFunction.correctTypo(word);
+    word = word.replaceAll("1", "I");
+    word = word.replaceAll("0", "O");
+    r2a.push(word === userAns);
 }
 const allR2Matched = r2a.every((result) => result === true);
 
@@ -37,8 +45,8 @@ describe('Typo Correction', () => {
   });
 
 
-  it('<b>TEST #4</b><br> should work with words with English words!$$[{"a1": " potato "},{"a1": "tomato"}]$$', () => {
-    expect(testFunction.correctTypo(' potato ')).to.equal(6);
-    expect(testFunction.correctTypo('tomato')).to.equal(6);
+  it('<b>TEST #4</b><br> should work with words with empty String and a String without typo!$$[{"a1": ""},{"a1": "TOMATO"}]$$', () => {
+    expect(testFunction.correctTypo('')).to.equal('');
+    expect(testFunction.correctTypo('TOMATO')).to.equal('TOMATO');
   });
 });

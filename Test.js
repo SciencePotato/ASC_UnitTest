@@ -164,17 +164,11 @@ console.log(arr);
 
 #endregion*/
 
-/*#region correctTypo
+/* #region correctTypo
 let wordLength = utils.randIntRange(1, 5000);
-let word = utils.randSentence(wordLength); 
-word = word.replaceAll(" ", "");
-word = word.replaceAll("0", "o");
-word = word.replaceAll("!", "1");
-word = word.replaceAll(".", "");
-word = word.replaceAll("?", "");
-word = word.replaceAll(",", "");
-console.log(word);
-
+let word = utils.specialSentence(wordLength); 
+word = word.replaceAll("1", "I");
+word = word.replaceAll("0", "O");
 #endregion */
 
 /*#region numberToBinary
