@@ -60,8 +60,8 @@ describe('Palindrome Number', () => {
   });
 
 
-  it('<b>TEST #4</b><br> should work with both Uppercase only and lowercase words with Spaces in them!$$[{"a1": "ABCDEFGHIJK"},{"a1": "potato"}]$$', () => {
-    expect(testFunction.isPalindromeNum('ABCDEFGHIJK')).to.equal('K');
-    expect(testFunction.isPalindromeNum('potato')).to.equal('t');
+  it('<b>TEST #4</b><br> should work with a singular digit!$$[{"a1": 0},{"a1": 1}]$$', () => {
+    expect(testFunction.isPalindromeNum(0)).to.equal(false);
+    expect(testFunction.isPalindromeNum(1)).to.equal(true);
   });
 });

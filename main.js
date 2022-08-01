@@ -34,7 +34,7 @@ function isPalindromeNum(num) {
     return false;
 }
 
-function sortArray(arr) {
+function toRomanNumeral(num) {
     return newArr;
 }
 
@@ -59,7 +59,7 @@ module.exports = {  sumTwo,
                     isPalindrome, 
                     isPalindromeNum, 
                     largestSingleDigit, 
-                    sortArray,
+                    toRomanNumeral,
                     correctTypo,
                     numToBinary,
                     fizzBuzz

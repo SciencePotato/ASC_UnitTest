@@ -153,17 +153,6 @@ for (let i = 0; i < (num.length / 2); i++) {
 }
 #endregion */ 
 
-/*#region Sorting Array
-let randNum = utils.randIntRange(1, 100);
-let arr = [];
-for (let i = 0; i < randNum; i++) {
-    arr.push(utils.randIntRange(-500,500))
-}
-arr.sort((a, b) => a - b)
-console.log(arr);
-
-#endregion*/
-
 /* #region correctTypo
 let wordLength = utils.randIntRange(1, 5000);
 let word = utils.specialSentence(wordLength); 
@@ -190,3 +179,7 @@ else if (randNum % 5 == 0)
 else
     ans = randNum.toString();
 #endregion */
+
+//#region Roman Numeral to Integer 
+console.log(utils.randSentence(10));
+//#endregion
