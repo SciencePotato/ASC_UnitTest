@@ -50,8 +50,7 @@ describe('Largest Alphabet', () => {
   });
 
 
-  it('<b>TEST #4</b><br> should work with both Uppercase only and lowercase only words!$$[{"a1": "ABCDEFGHIJK"},{"a1": "potato"}]$$', () => {
-    expect(testFunction.largestAlphabet('ABCDEFGHIJK')).to.equal('K');
-    expect(testFunction.largestAlphabet('potato')).to.equal('t');
+  it('<b>TEST #4</b><br> should work with one character Word!$$[{"a1": "A"}]$$', () => {
+    expect(testFunction.largestAlphabet('A')).to.equal('K');
   });
 });

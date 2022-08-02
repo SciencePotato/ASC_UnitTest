@@ -1,4 +1,3 @@
-
 const utils = require('../util.js');
 const testFunction = require('../main.js')
 const chai = require('chai');
@@ -15,7 +14,7 @@ for (let i = 0; i < 5; i++) {
     else if (randNum % 5 == 0)
         ans = "Buzz"
     else
-        ans = randNum.toString();
+        ans = randNum;
 
     let userAns =  testFunction.fizzBuzz();
     r1a.push(ans === userAns);
@@ -33,7 +32,7 @@ for (let i = 0; i < 5; i++) {
     else if (randNum % 5 == 0)
         ans = "Buzz"
     else
-        ans = randNum.toString();
+        ans = randNum;
 
     let userAns =  testFunction.fizzBuzz();
     r2a.push(userAns === userAns);
@@ -41,7 +40,6 @@ for (let i = 0; i < 5; i++) {
 const allR2Matched = r2a.every((result) => result === true);
 
 describe('FizzBuzz', () => {
-
 
   it('<b>TEST #1</b><br> fizzBuzz should be defined as a function', () => {
     expect(testFunction.fizzBuzz).to.exist;
@@ -59,7 +57,7 @@ describe('FizzBuzz', () => {
   });
 
 
-  it('<b>TEST #4</b><br> should work with words with English words!$$[{"a1": 0},{"a1": 1}]$$', () => {
+  it('<b>TEST #4</b><br> Two manual test for your function!$$[{"a1": 0}, {"a1": 1}]$$', () => {
     expect(testFunction.fizzBuzz(0)).to.equal('FizzBuzz');
     expect(testFunction.fizzBuzz(1)).to.equal(1);
   });

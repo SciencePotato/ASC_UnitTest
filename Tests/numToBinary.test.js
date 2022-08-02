@@ -43,8 +43,7 @@ describe('Number to Binary', () => {
   });
 
 
-  it('<b>TEST #4</b><br> should work with words with English words!$$[{"a1": " potato "},{"a1": "tomato"}]$$', () => {
-    expect(testFunction.numToBinary(4)).to.equal(1000);
+  it('<b>TEST #4</b><br> should work 0!$$[{"a1": 0}]$$', () => {
     expect(testFunction.numToBinary(0)).to.equal(0);
   });
 });

@@ -54,8 +54,7 @@ describe('Smallest Number', () => {
   });
 
 
-  it('<b>TEST #4</b><br> should work with numbers positive and negative Integer $$[{"a1": [1, 2, 3, 4, 5, 6, 7, 8, 9]},{"a1": [-1, -2, -3, -4, -5, -6, -7, -8, -9]}]$$', () => {
-    expect(testFunction.smallestNum([1, 2, 3, 4, 5, 6, 7, 8, 9])).to.equal(1);
-    expect(testFunction.smallestNum([-1, -2, -3, -4, -5, -6, -7, -8, -9])).to.equal(-9);
+  it('<b>TEST #4</b><br> should work with an empty array $$[,{"a1": []}]$$', () => {
+    expect(testFunction.smallestNum([])).to.equal(null);
   });
 });

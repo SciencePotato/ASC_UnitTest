@@ -181,5 +181,4 @@ else
 #endregion */
 
 //#region Roman Numeral to Integer 
-console.log(utils.randSentence(10));
 //#endregion

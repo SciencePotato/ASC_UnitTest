@@ -56,7 +56,7 @@ describe('Largest Single Digit', () => {
 
 
   it('<b>TEST #4</b><br> should work with 0 and number with 0 in front!$$[{"a1": 0},{"a1": 1}]$$', () => {
-    expect(testFunction.largestAlphabet(0)).to.equal(0);
-    expect(testFunction.largestAlphabet(010)).to.equal(1);
+    expect(testFunction.largestSingleDigit(0)).to.equal(0);
+    expect(testFunction.largestSingleDigit(010)).to.equal(1);
   });
 });

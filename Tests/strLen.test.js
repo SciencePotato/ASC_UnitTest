@@ -46,8 +46,8 @@ describe('String Length', () => {
   });
 
 
-  it('<b>TEST #4</b><br> should work with words with English words!$$[{"a1": " potato "},{"a1": "tomato"}]$$', () => {
+  it('<b>TEST #4</b><br> should work with random spaces!$$[{"a1": " potato "},{"a1": "t o m a t o"}]$$', () => {
     expect(testFunction.strLen(' potato ')).to.equal(6);
-    expect(testFunction.strLen('tomato')).to.equal(6);
+    expect(testFunction.strLen('t o m a t o')).to.equal(6);
   });
 });

@@ -1,4 +1,3 @@
-
 const utils = require('../util.js');
 const testFunction = require('../main.js')
 const chai = require('chai');
