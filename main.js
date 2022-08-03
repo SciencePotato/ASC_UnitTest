@@ -49,6 +49,10 @@ function numToBinary(num) {
 function fizzBuzz(num) {
     return "FizzBuzz";
 }
+ 
+function mappingAlphabet(num) {
+    return 0;
+}
 
 module.exports = {  sumTwo, 
                     smallestNum,
@@ -62,5 +66,6 @@ module.exports = {  sumTwo,
                     toRomanNumeral,
                     correctTypo,
                     numToBinary,
-                    fizzBuzz
+                    fizzBuzz,
+                    mappingAlphabet
                 };

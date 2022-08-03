@@ -182,3 +182,18 @@ else
 
 //#region Roman Numeral to Integer 
 //#endregion
+
+/*#region Mapping Alphabet
+let randLen = utils.randIntRange(0, 100);
+let randWord = "";
+let ans = 0;
+
+for (let i = 0; i < randLen; i ++) {
+    let tmp = utils.randIntRange(0, 25);
+    randWord += utils.capAlphabet[tmp];
+}
+
+for (let i = 0; i < randWord.length; i ++) {
+    ans += randWord.charCodeAt(i) - 64;
+}
+#endregion*/

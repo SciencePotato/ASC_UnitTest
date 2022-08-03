@@ -3,6 +3,7 @@ module.exports = class utilFunction {
     static spaceAlphabet = `      .,?!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,?!`;
     static onlyAlphabet = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`;
     static specialAlphabet = `10ABCDEFGHIJKLMNOPQRSTUVWXYZ10`;
+    static capAlphabet = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
 
     static randIntRange = (min, max) =>
         Math.floor(Math.random() * (max - min + 1)) + min;
