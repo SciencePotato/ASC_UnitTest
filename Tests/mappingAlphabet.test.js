@@ -6,43 +6,58 @@ const expect = chai.expect;
 
 let r1a = [];
 for (let i = 0; i < 5; i++) {
-    let wordLength = utils.randIntRange(1, 5000);
-    let word = utils.specialSentence(wordLength); 
-    let userAns =  testFunction.toRomanNumeral(word);
-    word = word.replaceAll("1", "I");
-    word = word.replaceAll("0", "O");
-    r1a.push(word === userAns);
+    let randLen = utils.randIntRange(0, 100);
+    let randWord = "";
+    let ans = 0;
+
+    for (let i = 0; i < randLen; i ++) {
+        let tmp = utils.randIntRange(0, 25);
+        randWord += utils.capAlphabet[tmp];
+    }
+
+    for (let i = 0; i < randWord.length; i ++) {
+        ans += randWord.charCodeAt(i) - 64;
+    }
+    let userAns = testFunction.mappingAlphabet(randWord);
+    r1a.push(ans === userAns);
 }
 const allR1Matched = r1a.every((result) => result === true);
 
 let r2a = [];
 for (let i = 0; i < 5; i++) {
-    let wordLength = utils.randIntRange(1, 5000);
-    let word = utils.specialSentence(wordLength); 
-    let userAns =  testFunction.toRomanNumeral(word);
-    word = word.replaceAll("1", "I");
-    word = word.replaceAll("0", "O");
-    r2a.push(word === userAns);
+    let randLen = utils.randIntRange(0, 100);
+    let randWord = "";
+    let ans = 0;
+
+    for (let i = 0; i < randLen; i ++) {
+        let tmp = utils.randIntRange(0, 25);
+        randWord += utils.capAlphabet[tmp];
+    }
+
+    for (let i = 0; i < randWord.length; i ++) {
+        ans += randWord.charCodeAt(i) - 64;
+    }
+    let userAns = testFunction.mappingAlphabet(randWord);
+    r2a.push(ans === userAns);
 }
 const allR2Matched = r2a.every((result) => result === true);
 
-describe('Typo Correction', () => {
+describe('Mapping Alphabet', () => {
 
-  it('<b>TEST #1</b><br> toRomanNumeral should be defined as a function', () => {
-    expect(testFunction.toRomanNumeral).to.exist;
-    expect(testFunction.toRomanNumeral).to.be.a('function');
+  it('<b>TEST #1</b><br> mappingAlphabet should be defined as a function', () => {
+    expect(testFunction.mappingAlphabet).to.exist;
+    expect(testFunction.mappingAlphabet).to.be.a('function');
   });
 
-  it('<b>TEST #2</b><br> testing toRomanNumeral 5 times with random combination of words', () => {
+  it('<b>TEST #2</b><br> testing mappingAlphabet 5 times with random combination of words', () => {
     expect(allR1Matched).to.be.true;
   });
 
-  it('<b>TEST #3</b><br> testing toRomanNumeral 5 more times with random combination of words', () => {
+  it('<b>TEST #3</b><br> testing mappingAlphabet 5 more times with random combination of words', () => {
     expect(allR2Matched).to.be.true;
   });
 
-  it('<b>TEST #4</b><br> should work with words with empty String and a String without typo!$$[{"a1": ""},{"a1": "TOMATO"}]$$', () => {
-    expect(testFunction.toRomanNumeral('')).to.equal('');
-    expect(testFunction.toRomanNumeral('TOMATO')).to.equal('TOMATO');
+  it('<b>TEST #4</b><br> should work with words with empty String!$$[{"a1": ""}]$$', () => {
+    expect(testFunction.mappingAlphabet('')).to.equal(0);
   });
 });
