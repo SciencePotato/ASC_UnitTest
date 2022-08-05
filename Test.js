@@ -181,6 +181,16 @@ else
 #endregion */
 
 //#region Roman Numeral to Integer 
+let randNum = utils.randIntRange(0, 2500);
+let digits = String(+randNum).split("");
+    key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+           "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+           "","I","II","III","IV","V","VI","VII","VIII","IX"],
+    roman = "",
+    i = 3;
+    while (i--)
+        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+console.log(Array(+digits.join("") + 1).join("M") + roman);
 //#endregion
 
 /*#region Mapping Alphabet
