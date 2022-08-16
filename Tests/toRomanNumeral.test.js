@@ -6,7 +6,7 @@ const expect = chai.expect;
 
 let r1a = [];
 for (let i = 0; i < 5; i++) {
-    let randNum = utils.randIntRange(1, 2500);
+    let randNum = utils.randIntRange(1, 100);
     let digits = String(+randNum).split("");
     key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
            "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
@@ -23,7 +23,7 @@ const allR1Matched = r1a.every((result) => result === true);
 
 let r2a = [];
 for (let i = 0; i < 5; i++) {
-    let randNum = utils.randIntRange(1, 2500);
+    let randNum = utils.randIntRange(1, 100);
     let digits = String(+randNum).split("");
     key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
            "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
