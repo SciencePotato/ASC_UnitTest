@@ -54,6 +54,10 @@ function mappingAlphabet(num) {
     return 0;
 }
 
+function validMountainArray(arr) {
+    return false;
+}
+
 module.exports = {  sumTwo, 
                     smallestNum,
                     strLen, 
@@ -67,5 +71,6 @@ module.exports = {  sumTwo,
                     correctTypo,
                     numToBinary,
                     fizzBuzz,
-                    mappingAlphabet
+                    mappingAlphabet,
+                    validMountainArray
                 };

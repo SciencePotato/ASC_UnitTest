@@ -180,7 +180,7 @@ else
     ans = randNum.toString();
 #endregion */
 
-//#region Roman Numeral to Integer 
+/*#region Roman Numeral to Integer 
 let randNum = utils.randIntRange(0, 2500);
 let digits = String(+randNum).split("");
     key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
@@ -191,7 +191,7 @@ let digits = String(+randNum).split("");
     while (i--)
         roman = (key[+digits.pop() + (i * 10)] || "") + roman;
 console.log(Array(+digits.join("") + 1).join("M") + roman);
-//#endregion
+#endregion*/
 
 /*#region Mapping Alphabet
 let randLen = utils.randIntRange(0, 100);
@@ -207,3 +207,33 @@ for (let i = 0; i < randWord.length; i ++) {
     ans += randWord.charCodeAt(i) - 64;
 }
 #endregion*/
+
+//#region Valid Mountain Array
+let randLen = utils.randIntRange(20, 40);
+let fakeMountain = [];
+for (let i = 0; i < randLen; i ++){
+    let ranInt = utils.randIntRange(0, 1000);
+    fakeMountain.push(ranInt);
+}
+
+/*
+let randIncrease = utils.randIntRange(2, 15);
+let randDecrease = utils.randIntRange(2, 15);
+let realMountain = [];
+realMountain[0] = utils.randIntRange(1, 10);
+for (let i = 0; i < randIncrease; i ++) {
+    realMountain.push(utils.randIntRange(realMountain[i] + 1, realMountain[i] + 10));
+}
+
+for (let i = 0; i < randDecrease; i ++) {
+    realMountain.push(utils.randIntRange(realMountain[randIncrease + i] - 20, realMountain[randIncrease + i] - 1));
+}
+*/
+
+let l = 0;
+let r = fakeMountain.length - 1;
+while(l + 1 < fakeMountain.length - 1 && fakeMountain[l] < fakeMountain[l + 1]) l++;
+while(r - 1 > 0 && fakeMountain[r] < fakeMountain[r - 1]) r--;
+
+console.log(fakeMountain, l == r);
+//#endregion
