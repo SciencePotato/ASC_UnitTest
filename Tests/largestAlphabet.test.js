@@ -51,6 +51,6 @@ describe('Largest Alphabet', () => {
 
 
   it('<b>TEST #4</b><br> should work with one character Word!$$[{"a1": "A"}]$$', () => {
-    expect(testFunction.largestAlphabet('A')).to.equal('K');
+    expect(testFunction.largestAlphabet('A')).to.equal('A');
   });
 });

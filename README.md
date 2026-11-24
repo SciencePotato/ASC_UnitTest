@@ -35,3 +35,11 @@ $$
 `utils.randomIntRange(minNum, maxNum)` - Returns a number between minNum and maxNum.
 `utils.randomSentence(len)` - Returns a random sentence based on the static variable `alphabet`.
 `utils.randomSentenceSpace(len)` - Returns a random sentence based on the static variable `spaceAlphabet`.
+
+## Oracle regressions
+
+After installing the existing dependencies, run `node --test checks/oracles.test.cjs`.
+This executes the largest-alphabet, funny-math, and Roman suites against known
+reference answers and checks rejection of wrong implementations. Roman test
+generation must finish both five-sample batches without leaking globals.
+The unfinished student functions in `main.js` are intentionally unchanged.

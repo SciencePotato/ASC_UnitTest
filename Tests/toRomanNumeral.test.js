@@ -8,13 +8,12 @@ let r1a = [];
 for (let i = 0; i < 5; i++) {
     let randNum = utils.randIntRange(1, 100);
     let digits = String(+randNum).split("");
-    key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+    const key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
            "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
-           "","I","II","III","IV","V","VI","VII","VIII","IX"],
-    roman = "",
-    i = 3;
-    while (i--)
-        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+           "","I","II","III","IV","V","VI","VII","VIII","IX"];
+    let roman = "";
+    for (let digit = 2; digit >= 0; digit--)
+        roman = (key[+digits.pop() + (digit * 10)] || "") + roman;
     let romanAns = Array(+digits.join("") + 1).join("M") + roman;
     let userAns = testFunction.toRomanNumeral(romanAns);
     r1a.push(randNum === userAns);
@@ -25,13 +24,12 @@ let r2a = [];
 for (let i = 0; i < 5; i++) {
     let randNum = utils.randIntRange(1, 100);
     let digits = String(+randNum).split("");
-    key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+    const key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
            "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
-           "","I","II","III","IV","V","VI","VII","VIII","IX"],
-    roman = "",
-    i = 3;
-    while (i--)
-        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+           "","I","II","III","IV","V","VI","VII","VIII","IX"];
+    let roman = "";
+    for (let digit = 2; digit >= 0; digit--)
+        roman = (key[+digits.pop() + (digit * 10)] || "") + roman;
     let romanAns = Array(+digits.join("") + 1).join("M") + roman;
     let userAns = testFunction.toRomanNumeral(romanAns);
     r2a.push(randNum === userAns);

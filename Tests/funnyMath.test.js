@@ -43,6 +43,6 @@ describe('Funny Math', () => {
 
 
   it('<b>TEST #4</b><br> Your function should work with two same input!$$[{"a1": 0, "a2" : 0}]$$', () => {
-    expect(testFunction.funnyMath(0, 0)).to.equal(6);
+    expect(testFunction.funnyMath(0, 0)).to.equal(0);
   });
 });
