@@ -15,7 +15,7 @@ for (let i = 0; i < 5; i++) {
         inputArray.push(tmpNum);
     };
     let userAns = testFunction.smallestNum(inputArray);
-    r1a.push(tmpSum === userAns);
+    r1a.push(tmp === userAns);
 }
 const allR1Matched = r1a.every((result) => result === true);
 
