@@ -1,5 +1,10 @@
 # ASC UNIT TEST
 
+Run `node --test Tests/largest_digit_oracle.test.cjs` to check that digit
+extraction leaves the original generated input available for the exercise.
+The manual ten input is decimal `10`, not the legacy octal `010` (eight).
+Correct exercise doubles pass and constant-nine answers fail; stubs are unchanged.
+
 ## Resources
 
 - [Chai reference](https://www.chaijs.com/api/bdd/)
