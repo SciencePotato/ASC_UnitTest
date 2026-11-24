@@ -16,7 +16,7 @@ for (let i = 0; i < 5; i++) {
     else
         ans = randNum;
 
-    let userAns =  testFunction.fizzBuzz();
+    let userAns =  testFunction.fizzBuzz(randNum);
     r1a.push(ans === userAns);
 }
 const allR1Matched = r1a.every((result) => result === true);
@@ -34,8 +34,8 @@ for (let i = 0; i < 5; i++) {
     else
         ans = randNum;
 
-    let userAns =  testFunction.fizzBuzz();
-    r2a.push(userAns === userAns);
+    let userAns =  testFunction.fizzBuzz(randNum);
+    r2a.push(ans === userAns);
 }
 const allR2Matched = r2a.every((result) => result === true);
 

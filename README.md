@@ -1,5 +1,9 @@
 # ASC UNIT TEST
 
+Run `node --test Tests/fizzbuzz_oracle.test.cjs` to check the actual FizzBuzz
+suite's generated-number calls and both answer comparisons. Correct exercise
+doubles pass; wrong answers in either batch fail. Student stubs remain unchanged.
+
 ## Resources
 
 - [Chai reference](https://www.chaijs.com/api/bdd/)
