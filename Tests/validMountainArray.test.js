@@ -38,11 +38,11 @@ for (let i = 0; i < 5; i++) {
     }
 
     let l = 0;
-    let r = fakeMountain.length - 1;
-    while(l + 1 < fakeMountain.length - 1 && fakeMountain[l] < fakeMountain[l + 1]) l++;
-    while(r - 1 > 0 && fakeMountain[r] < fakeMountain[r - 1]) r--;
+    let r = realMountain.length - 1;
+    while(l + 1 < realMountain.length - 1 && realMountain[l] < realMountain[l + 1]) l++;
+    while(r - 1 > 0 && realMountain[r] < realMountain[r - 1]) r--;
     let ans = (l == r);
-    let userAns = testFunction.validMountainArray(fakeMountain);
+    let userAns = testFunction.validMountainArray(realMountain);
     r2a.push(ans === userAns);
 }
 const allR2Matched = r2a.every((result) => result === true);

@@ -1,5 +1,16 @@
 # ASC UNIT TEST
 
+The mountain suite's positive batch evaluates its generated `realMountain`
+arrays, not a variable from a previous block. Isolated oracle check:
+
+```sh
+node --test Tests/mountain-oracle.test.cjs
+```
+
+This executes the real suite with exercise/Chai doubles, verifies strict ascent
+and descent, accepts correct answers, and rejects inverted answers. Deliberate
+exercise stubs in `main.js` remain unchanged.
+
 ## Resources
 
 - [Chai reference](https://www.chaijs.com/api/bdd/)
