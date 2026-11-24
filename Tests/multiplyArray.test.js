@@ -15,7 +15,8 @@ for (let i = 0; i < 5; i++) {
         resultArr[i] = arr1[i] * arr2[i];
     }
     let userAns =  testFunction.multiplyArray(arr1, arr2);
-    r1a.push(resultArr === userAns);
+    r1a.push(Array.isArray(userAns) && resultArr.length === userAns.length
+        && resultArr.every((value, i) => value === userAns[i]));
 }
 const allR1Matched = r1a.every((result) => result === true);
 
@@ -31,7 +32,8 @@ for (let i = 0; i < 5; i++) {
         resultArr[i] = arr1[i] * arr2[i];
     }
     let userAns =  testFunction.multiplyArray(arr1, arr2);
-    r2a.push(resultArr === userAns);
+    r2a.push(Array.isArray(userAns) && resultArr.length === userAns.length
+        && resultArr.every((value, i) => value === userAns[i]));
 }
 const allR2Matched = r2a.every((result) => result === true);
 
@@ -55,7 +57,7 @@ describe('Multiply Array', () => {
 
 
   it('<b>TEST #4</b><br> should work with a single item array!$$[{"a1": [0], "a2": [0]},{"a1": [1], "a2": [1]}]$$', () => {
-    expect(testFunction.multiplyArray([0], [0])).to.equal(0);
-    expect(testFunction.multiplyArray([1], [1])).to.equal(1);
+    expect(testFunction.multiplyArray([0], [0])).to.deep.equal([0]);
+    expect(testFunction.multiplyArray([1], [1])).to.deep.equal([1]);
   });
 });

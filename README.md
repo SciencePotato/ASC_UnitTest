@@ -1,5 +1,16 @@
 # ASC UNIT TEST
 
+The multiplication suite compares array lengths and element values, not array
+identity. Singleton results are arrays too. Isolated oracle check:
+
+```sh
+node --test Tests/multiply-oracle.test.cjs
+```
+
+This runs the actual suite with exercise/Chai doubles and verifies acceptance
+of fresh correct arrays and rejection of incorrect products. It does not
+implement or claim success for the intentional `main.js` exercise stubs.
+
 ## Resources
 
 - [Chai reference](https://www.chaijs.com/api/bdd/)
