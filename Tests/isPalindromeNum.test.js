@@ -23,7 +23,7 @@ let r2a = [];
 for (let i = 0; i < 5; i++) {
     let num = utils.randIntRange(1,10000000);
     num = num.toString();
-    reverseNum = '';
+    let reverseNum = '';
     for (let i = num.length - 1; i >= 0; i --) {
         reverseNum += num.charAt(i);
     }
@@ -37,6 +37,7 @@ for (let i = 0; i < 5; i++) {
         if (!(num.charAt(i) == num.charAt(num.length - i - 1)))
             isPalindrome = false;
     }
+    let userAns = testFunction.isPalindromeNum(num);
     r2a.push(isPalindrome === userAns);
 }
 const allR2Matched = r2a.every((result) => result === true);

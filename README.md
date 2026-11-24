@@ -1,5 +1,11 @@
 # ASC UNIT TEST
 
+Run `node --test Tests/palindrome_number_oracle.test.cjs` to check that both
+numeric-palindrome batches call the exercise with their own generated values
+and reject incorrect positive-batch answers. The exercise stubs and the
+separate explicit zero-input expectation are unchanged; this check covers the
+generated batches, not the entire challenge suite.
+
 ## Resources
 
 - [Chai reference](https://www.chaijs.com/api/bdd/)
