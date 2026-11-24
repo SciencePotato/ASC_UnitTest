@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/SumSomeNums.test.js",
-    "test:r": "mocha ./tests/SumSomeNums.test.js --reporter ./customReporter.js"
+    "test": "mocha \"./Tests/**/*.test.js\"",
+    "test:r": "mocha \"./Tests/**/*.test.js\" --reporter ./customReporter.js",
+    "test:generators": "node --test Tests/generators.test.cjs"
   },
   "keywords": [],
   "author": "",

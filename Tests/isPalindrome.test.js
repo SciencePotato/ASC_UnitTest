@@ -26,7 +26,7 @@ for (let i = 0; i < 5; i++) {
     let wordCharacter = [];
     let word = ""
     for (let i = 0; i < wordLength; i ++) {
-        let char = utils.onlyAlphabet.charAt(utils.randIntRange(1, utils.onlyAlphabet.length));
+        let char = utils.onlyAlphabet.charAt(utils.randIntRange(0, utils.onlyAlphabet.length - 1));
         wordCharacter.push(char);
     }
 

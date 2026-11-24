@@ -100,7 +100,7 @@ let wordLength = utils.randIntRange(1, 10);
 let wordCharacter = [];
 let word = ""
 for (let i = 0; i < wordLength; i ++) {
-    let char = utils.onlyAlphabet.charAt(utils.randIntRange(1, utils.onlyAlphabet.length));
+    let char = utils.onlyAlphabet.charAt(utils.randIntRange(0, utils.onlyAlphabet.length - 1));
     wordCharacter.push(char);
 }
 
