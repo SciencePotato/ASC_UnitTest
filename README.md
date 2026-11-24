@@ -1,5 +1,16 @@
 # ASC UNIT TEST
 
+The smallest-number suite compares against the minimum it computed rather than
+an undefined identifier. Its isolated oracle check accepts correct negative/
+empty results and rejects a wrong answer without completing any exercise:
+
+```sh
+node --test Tests/minimum-oracle.test.cjs
+```
+
+This executes the real suite with a recording test environment and exercise
+double. It does not claim that the deliberately incomplete `main.js` passes.
+
 ## Resources
 
 - [Chai reference](https://www.chaijs.com/api/bdd/)
