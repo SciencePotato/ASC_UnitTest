@@ -1,5 +1,26 @@
 # ASC UNIT TEST
 
+## Run the challenge suites
+
+Use Node.js 22 for the legacy dependency lock (Mocha 10). From the repository
+root, install the existing dependencies and run:
+
+```sh
+npm ci
+npm test
+npm run test:r
+npm run test:generators
+```
+
+The root scripts discover `Tests/**/*.test.js` (capital `T`). The separate
+`Examples/` project has its own `tests/SumSomeNums.test.js`; run it with
+`cd Examples && npm install && npm test`.
+
+`main.js` deliberately contains exercise stubs. Challenge failures are expected
+until learners implement them; discovering the suites does not mean they pass.
+`test:generators` checks the palindrome test-input generator independently of
+those stubs, including the first/last alphabet index.
+
 ## Resources
 
 - [Chai reference](https://www.chaijs.com/api/bdd/)
