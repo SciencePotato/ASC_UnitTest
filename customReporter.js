@@ -80,10 +80,9 @@ var MyReporter = /** @class */ (function () {
             r.title = parsedTitle.actualTitle;
             if (err.name === 'AssertionError') {
                 //! Code  ran and has test results
-                var obj = JSON.parse(JSON.stringify(err));
-                r.given = obj.actual;
-                r.expected = obj.expected;
-                r.stack = obj.stack;
+                r.given = err.actual;
+                r.expected = err.expected;
+                r.stack = err.stack;
             }
             else {
                 //! Code failed to run section
