@@ -1,5 +1,10 @@
 # ASC UNIT TEST
 
+The root and example reporters preserve assertion values and stack traces
+without JSON serialization, including BigInt and circular answers.
+Run `node --test checks/reporter_values.test.cjs` for the focused reporter
+checks. These do not implement or validate the unfinished student exercises.
+
 ## Resources
 
 - [Chai reference](https://www.chaijs.com/api/bdd/)
